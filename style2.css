@@ -1,0 +1,142 @@
+/*part-4 starts from here*/
+.button {
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.person-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  max-width: 50.5em;
+  background-color:#128c7e;
+  padding:15px;
+}
+
+.person-selector-button {
+ border-radius:30px;
+  background-image:url("prasanna.jpg");
+  height:70px;
+  width:70px;
+  background-size:cover;
+  
+}
+
+.active-person{
+  border-radius:30px;
+  background-image:url("Theekshitha.png");
+  height:70px;
+  width:70px;
+  background-size:cover;
+  
+}
+
+.chat-container {
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0.5em;
+  padding:5px;
+  margin: auto;
+  max-width: 50.5em;
+  height: 98%;
+  border:5px solid #128c7e;
+  box-shadow: 0 0 1.25em 0.5em #c3c3c333;
+  
+}
+
+.chat-header {
+  margin-bottom: 1em;
+  color: #170303;
+}
+
+.chat-header h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.chat-messages {
+  height: 23em;
+  overflow-y: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+.message {
+  padding: 0.625em;
+  border-radius: 1em;
+  margin-bottom: 0.625em;
+  display: flex;
+  flex-direction: column;
+  color: #180101;
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 0.31em;
+}
+
+.message-text {
+  font-size: 1em;
+  margin-bottom: 0.31em;
+  word-wrap: break-word;
+}
+
+.message-timestamp {
+  font-size: 0.75em;
+  text-align: right;
+}
+
+.green-bg {
+  background-color: #1fef64;
+  margin-right: auto; 
+  max-width:80%;
+}
+
+.blue-bg{
+  background-color: #84c2f5;
+  margin-left: auto; 
+   max-width:80%;
+}
+
+.chat-input-form {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  gap: 0.625em;
+}
+
+.chat-input {
+  padding: 0.625em;
+  border-radius: 0.5em;
+  background-color: #f9f1f1;
+  border:2px solid black;
+  color: #333;
+  font-size: 1em;
+  flex-grow: 1;
+}
+
+.send-button {
+  background-color: #1c9bef;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  padding:10px;
+}
+
+.clear-chat-button {
+  display: block;
+  margin: 2.5em auto;
+  background-color: #47e69c;
+  padding:10px;
+}

@@ -1,4 +1,3 @@
-//Part-3 Starts from here
 document.addEventListener('DOMContentLoaded', function () {
   const TheekshithaSelectorBtn = document.querySelector('#Theekshitha-selector');
   const TeacherSelectorBtn = document.querySelector('#Teacher-selector');
@@ -18,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   `;
 
+  // Declare the 'active,' 'statusBar,' 'callBar,' 'chatCallStatus,' and 'chartBar' variables within the window.onload function
   let active;
   let statusBar;
   let callBar;
@@ -99,30 +99,40 @@ document.addEventListener('DOMContentLoaded', function () {
       TeacherSelectorBtn.classList.add('active-person');
       TheekshithaSelectorBtn.classList.remove('active-person');
     }
+
     /* auto-focus the input field */
     chatInput.focus();
   };
+
   TheekshithaSelectorBtn.onclick = () => updateMessageSender('Theekshitha');
   TeacherSelectorBtn.onclick = () => updateMessageSender('Teacher');
+
   const sendMessage = (e) => {
     e.preventDefault();
+
     const timestamp = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
     const message = {
       sender: messageSender,
       text: chatInput.value,
       timestamp,
     };
+
     /* Save message to local storage */
     messages.push(message);
     localStorage.setItem('messages', JSON.stringify(messages));
+
     /* Add message to DOM */
     chatMessages.innerHTML += createChatMessageElement(message);
+
     /* Clear input field */
     chatInputForm.reset();
+
     /* Scroll to the bottom of chat messages */
     chatMessages.scrollTop = chatMessages.scrollHeight;
   };
+
   chatInputForm.addEventListener('submit', sendMessage);
+
   clearChatBtn.addEventListener('click', () => {
     localStorage.clear();
     chatMessages.innerHTML = '';
